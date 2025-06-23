@@ -1,16 +1,19 @@
 #include <string>
 #include <vector>
-#include <cmath>
 
 using namespace std;
 
-long long solution(long long n) {
-    long long x = sqrt(n);
+long long solution(long long n)
+{
+    // n = 4
+    long long x = 1;
 
-    if (x * x == n) {
-        return (x + 1) * (x + 1);
+    for (long long x = 1; x <= n; x++)
+    {
+        if (x * x == n)
+        {
+            return (x + 1) * (x + 1);
+        }
     }
-    else {
-        return -1;
-    }
+    return -1;
 }
